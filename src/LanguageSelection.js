@@ -10,13 +10,15 @@ const LanguageSelection = () => {
         )[0];
         setCurrLocaleObj(newLocale);
     };
+
   return (
-      <div className="vertical-center">
-          <div className="haveMargin">
-              <label className="labels">{currLocaleObj.language} : </label>
+      <div className="inline-block align-middle">
+          <div className="my-8">
+              <label className="labels" aria-labelledby="language-choice">{currLocaleObj.language}: </label>
               <select
                   value={currLocaleObj.locale}
                   onChange={updateCurrLocaleObj}
+                  aria-label="language-choice"
               >
                   <option value="en-US">English</option>
                   <option value="nl-NL">Dutch</option>

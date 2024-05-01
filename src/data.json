@@ -1,23 +1,23 @@
 [
   {
     "locale": "en-US",
-    "language": "English",
+    "language": "Language",
     "themeLabel": "Choose Theme",
     "languageLabel": "Select Language",
-    "content": "Hello world!!"
+    "content": "Hello, World!"
   },
   {
     "locale": "nl-NL",
-    "language": "Dutch",
+    "language": "Taal",
     "themeLabel": "Kies Thema",
     "languageLabel": "Selecteer Taal",
-    "content": "Hallo Wereld"
+    "content": "Hallo, Wereld!"
   },
   {
     "locale": "es-ES",
-    "language": "Spanish",
+    "language": "Idioma",
     "themeLabel": "Escoge un tema",
     "languageLabel": "Seleccione el idioma",
-    "content": "Hola Mundo!!"
+    "content": "Hola, Mundo!"
   }
 ]

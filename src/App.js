@@ -1,13 +1,10 @@
 import React from "react";
 
-import "./styles.css";
-
 import LanguageSelection from "./LanguageSelection";
 
 const App = () => {
-
     return (
-        <div className={`App container`}>
+        <div className='w-full h-full flex flex-col items-center justify-center'>
             <LanguageSelection />
         </div>
     );
