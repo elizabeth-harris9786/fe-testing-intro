@@ -1,6 +1,6 @@
 import React from "react";
 
-import LanguageSelection from "./LanguageSelection";
+import LanguageSelection from "./components/LanguageSelection";
 
 const App = () => {
     return (

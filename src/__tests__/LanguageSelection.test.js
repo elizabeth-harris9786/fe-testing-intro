@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import LanguageSelection from '../LanguageSelection';
+import LanguageSelection from '../components/LanguageSelection';
 
 describe('LanguageSelection component', () => {
   beforeEach(() => {

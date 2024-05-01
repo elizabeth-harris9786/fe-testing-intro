@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import localesData from "./data.json";
+import localesData from "../data.json";
 
 const LanguageSelection = () => {
     const [currLocaleObj, setCurrLocaleObj] = useState(localesData[0]);
