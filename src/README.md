@@ -74,6 +74,9 @@ React Testing Library (RTL) is a library for testing React applications.
 React Testing Library focuses on testing components from the end-user’s experience rather than testing the implementation and logic of the underlying React components.
 
 ### RTL Terms
+
+[Reference](https://www.codecademy.com/learn/learn-react-testing/modules/react-testing-library/cheatsheet)
+
 #### `render`
 
 The React Testing Library (RTL) provides a `render()` method for virtually rendering React components in the testing environment. 
@@ -113,33 +116,32 @@ You only need to type `screen.` and let your editor's magic autocomplete take ca
 The only exception to this is if you're setting the container or baseElement which you probably should avoid doing
 (I honestly can't think of a legitimate use case for those options anymore, and they only exist for historical reasons at this point).
 
+[Greeting example](./__tests__/Greeting.test.js)
+
 #### `getByX` Queries
 
 The screen object from the React Testing Library (RTL) provides methods for querying the rendered elements of the DOM in order to make assertions about their text content, attributes, and more.
 
 The `screen.getByX()` methods (such as `screen.getByRole()` and `screen.getByText()`) return the matching DOM node for a query, or throw an error if no element is found.
 
-```js
-import { render, screen } from '@testing-library/react';
-
-const Button = () => {
-  return <button type="submit">Click Me</button>
-};
-
-// The button node can be extracted via its text content with screen.getByText()
-it('Extract button node with getByText', () => {
-  render(<Button/>);
-  const button = screen.getByText('Click Me'); 
-});
-
-// The same button node can also be extracted with screen.getByRole()
-it('Extract button node with getByRole', () => {
-  render(<Button/>);
-  const button = screen.getByRole('button'); 
-});
-```
+[Button example](./__tests__/Buttons.test.js)
 
 #### User Event
 
 The `@testing-library/user-event` library is an extension of `@testing-library` that provides tools for simulating and applying user interactions to the virtual DOM. 
 The provided userEvent object contains methods that can be used to simulate clicks, typing, and much more.
+
+[GreetingFormTest example](./__tests__/GreetingForm.test.js) 
+
+#### Jest DOM
+
+The `@testing-library/jest-dom` package contains DOM-specific matcher methods for testing front-end applications with Jest. Some common matcher methods include:
+
+* `.toBeInTheDocument()`
+* `.toBeVisible()`
+* `.toHaveValue()`
+* `.toHaveStyle()`
+
+It is common for this library to be used alongside the React Testing Library. The `jest-dom` documentation should be consulted to find the appropriate matcher method for your needs.
+
+[Header example](./__tests__/Header.test.js) 
